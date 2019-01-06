@@ -1,10 +1,10 @@
-all: client server
+JFLAGS = -g
+JCC = javac
 
-client: client.o
-	g++ client.cpp -o client
-	
-server: server.o
-	g++ server.cpp -o server	
-	
-clean:
-	\rm *.o client server
+default: myBackoff.class 
+
+myBackoff.class: myBackoff.java
+	$(JCC) $(JFLAGS) myBackoff.java
+
+clean: 
+	$(RM) *.class received.txt

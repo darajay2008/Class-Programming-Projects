@@ -64,7 +64,8 @@ def manhattenwlc(a,b) :
 				brow = bb/3; bcol=bb%3  #modified
 				manwlcTable[(aa,bb)] = abs(arow-brow)+abs(acol-bcol)
 	ans = manwlcTable.get((a,b))
-	if ans == None : print ("args",a,b,a+b,"->",ans)
+	if ans == None : 
+		print ("args",a,b,a+b,"->",ans)
 			
 	return ans
 	#do that of column. Also cater for the situation where both row and column are 0
